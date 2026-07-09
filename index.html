@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sujon — Statistics Researcher | Biostatistics & Epidemiology</title>
+  <meta name="description" content="Final-year Statistics undergraduate at Jagannath University and researcher at StatAid Research Lab. Building tools for population health data analysis, with a focus on explainable ML, survival analysis, and health equity." />
+  <meta name="author" content="Sujon" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sujon — Statistics Researcher | Biostatistics & Epidemiology" />
+  <meta property="og:description" content="Turning population health data into actionable insight. Researcher at StatAid Research Lab, building toward funded postgrad in biostatistics and epidemiology." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:url" content="" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sujon — Statistics Researcher" />
+  <meta name="twitter:description" content="Turning population health data into actionable insight." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%1e293b'/><text y='.9em' font-size='72' x='50' text-anchor='middle' fill='%14b8a6'>S</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar" class="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Sujon</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav__cta">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="hero" class="hero">
+    <div class="hero__bg" aria-hidden="true">
+      <svg class="hero__chart" viewBox="0 0 1440 600" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.0"/>
+            <stop offset="50%" stop-color="var(--accent)" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0"/>
+          </linearGradient>
+          <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.08"/>
+            <stop offset="100%" stop-color="var(--accent)" stop-opacity="0.0"/>
+          </linearGradient>
+        </defs>
+        <!-- Faint area chart -->
+        <path d="M0,420 Q180,380 360,400 T720,340 T1080,300 T1440,260 L1440,600 L0,600 Z" fill="url(#areaGrad)"/>
+        <path d="M0,420 Q180,380 360,400 T720,340 T1080,300 T1440,260" fill="none" stroke="url(#lineGrad)" stroke-width="2"/>
+        <!-- Faint scatter dots -->
+        <g fill="var(--accent)" opacity="0.15">
+          <circle cx="200" cy="380" r="3"/>
+          <circle cx="450" cy="360" r="2"/>
+          <circle cx="680" cy="320" r="4"/>
+          <circle cx="900" cy="310" r="2"/>
+          <circle cx="1150" cy="280" r="3"/>
+          <circle cx="1300" cy="250" r="2"/>
+        </g>
+        <!-- Network graph motif -->
+        <g stroke="var(--accent)" stroke-opacity="0.08" fill="none" stroke-width="1">
+          <line x1="100" y1="150" x2="250" y2="100"/>
+          <line x1="250" y1="100" x2="400" y2="180"/>
+          <line x1="100" y1="150" x2="400" y2="180"/>
+          <line x1="250" y1="100" x2="350" y2="50"/>
+          <line x1="1100" y1="120" x2="1250" y2="80"/>
+          <line x1="1250" y1="80" x2="1350" y2="150"/>
+          <line x1="1100" y1="120" x2="1350" y2="150"/>
+        </g>
+        <g fill="var(--accent)" opacity="0.12">
+          <circle cx="100" cy="150" r="4"/>
+          <circle cx="250" cy="100" r="5"/>
+          <circle cx="400" cy="180" r="3"/>
+          <circle cx="350" cy="50" r="3"/>
+          <circle cx="1100" cy="120" r="4"/>
+          <circle cx="1250" cy="80" r="5"/>
+          <circle cx="1350" cy="150" r="3"/>
+        </g>
+      </svg>
+    </div>
+    <div class="hero__content reveal">
+      <p class="hero__greeting">Hello, I'm</p>
+      <h1 class="hero__name">Sujon</h1>
+      <p class="hero__title">Statistics Researcher | Biostatistics &amp; Epidemiology</p>
+      <p class="hero__tagline">
+        Turning population health data into actionable insight — through reproducible
+        analysis, explainable machine learning, and rigorous statistical method.
+      </p>
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Research</a>
+        <a href="#" class="btn btn--ghost" download>Download CV</a>
+        <a href="#contact" class="btn btn--ghost">Contact Me</a>
+      </div>
+    </div>
+    <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+      <span></span>
+    </a>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title">About</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <p>
+            I'm a final-year undergraduate in the <strong>Department of Statistics, Jagannath University</strong>
+            (16th batch), based in Dhaka, Bangladesh. My work sits at the intersection of
+            statistical method and public health practice — I analyze large-scale population
+            health survey data and build tools that make rigorous analysis more accessible.
+          </p>
+          <p>
+            As a researcher at <strong>StatAid Research Lab</strong>, I work with WHO STEPS, DHS,
+            and MICS datasets to measure non-communicable disease multimorbidity, quantify health
+            inequalities, and estimate the concentration index. I'm currently developing an R package
+            (<code>SurveyNCD</code>) that packages these workflows into a reusable, CRAN-bound toolkit.
+          </p>
+          <p>
+            My research interests center on <strong>explainable machine learning in healthcare</strong>,
+            survival analysis, multilevel modeling, and maternal &amp; child health inequalities.
+            I'm also interested in epidemic surveillance systems — combining classical epidemiological
+            models with modern forecasting techniques.
+          </p>
+          <p>
+            I'm building toward a funded master's or PhD in biostatistics, epidemiology, or public
+            health data science. Target programs include Harvard Chan, Johns Hopkins BSPH, LSHTM,
+            Karolinska, and the Universities of Melbourne and Adelaide. I'm currently preparing for
+            IELTS and GRE.
+          </p>
+          <p class="about__note">
+            <em>[This About section is a draft — edit freely before publishing.]</em>
+          </p>
+        </div>
+        <aside class="about__card reveal">
+          <div class="about__card-item">
+            <span class="about__card-label">University</span>
+            <span class="about__card-value">Jagannath University</span>
+          </div>
+          <div class="about__card-item">
+            <span class="about__card-label">Department</span>
+            <span class="about__card-value">Statistics · 16th Batch</span>
+          </div>
+          <div class="about__card-item">
+            <span class="about__card-label">Research Lab</span>
+            <span class="about__card-value">StatAid Research Lab</span>
+          </div>
+          <div class="about__card-item">
+            <span class="about__card-label">Location</span>
+            <span class="about__card-value">Dhaka, Bangladesh</span>
+          </div>
+          <div class="about__card-item">
+            <span class="about__card-label">Focus</span>
+            <span class="about__card-value">Biostatistics · Epidemiology · Health Data Science</span>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION ===== -->
+  <section id="education" class="section section--alt">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Education &amp; Test Prep</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2021 — Present</span>
+            <h3 class="timeline__title">B.Sc. (Honours) in Statistics</h3>
+            <p class="timeline__org">Jagannath University, Dhaka · 16th Batch</p>
+            <p class="timeline__desc">
+              Coursework includes Design of Experiments, Epidemiology, Biostatistics,
+              Operations Research, Probability &amp; Inference, Regression Analysis, and
+              Statistical Computing. Final-year student, expected completion in 2026.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">In Progress</span>
+            <h3 class="timeline__title">IELTS &amp; GRE Preparation</h3>
+            <p class="timeline__org">For Fall 2026 / 2027 Graduate Admissions</p>
+            <p class="timeline__desc">
+              Actively preparing for IELTS (target: 7.0+) and GRE (target: 320+) to meet
+              admission requirements for funded master's and PhD programs abroad.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot timeline__dot--muted"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">Considering</span>
+            <h3 class="timeline__title">Domestic Master's Options</h3>
+            <p class="timeline__org">BUET · CUET · RUET</p>
+            <p class="timeline__desc">
+              Exploring domestic postgraduate pathways as a backup to international applications,
+              with interest in applied statistics and data science programs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Featured Projects</h2>
+      </div>
+      <div class="projects__grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-card__head">
+            <div class="project-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 2 5-6"/></svg>
+            </div>
+            <div>
+              <h3 class="project-card__title">SurveyNCD</h3>
+              <p class="project-card__subtitle">R Package for Complex Survey Analysis</p>
+            </div>
+          </div>
+          <p class="project-card__desc">
+            An R package for complex survey analysis of WHO STEPS, DHS, and MICS data —
+            covering NCD multimorbidity, concentration index computation, and health
+            inequality measurement. In active development toward CRAN submission. The
+            journey is documented in a LinkedIn series: <em>"Building My First R Package —
+            Learning in Public."</em>
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">R</span>
+            <span class="tag">Survey Design</span>
+            <span class="tag">Health Inequality</span>
+            <span class="tag">CRAN (pending)</span>
+          </div>
+          <a href="https://github.com/StatAid-Research-Lab/SurveyNCD" class="project-card__link" aria-label="View SurveyNCD on GitHub">
+            View Repository →
+          </a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-card__head">
+            <div class="project-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <h3 class="project-card__title">EpiAgent</h3>
+              <p class="project-card__subtitle">Epidemic Surveillance Pipeline</p>
+            </div>
+          </div>
+          <p class="project-card__desc">
+            A Python-based epidemic surveillance pipeline combining SEIR modeling, Bayesian
+            Rt estimation (Cori et al. method), BOCPD changepoint detection, XGBoost+SHAP
+            forecasting, and automated dashboards. Submitted to the Google/Kaggle 5-Day AI
+            Agents Intensive capstone competition. Strengths: clean architectural separation
+            of LLM reasoning from deterministic computation, strong test coverage.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">SEIR</span>
+            <span class="tag">Bayesian Rt</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">SHAP</span>
+            <span class="tag">BOCPD</span>
+          </div>
+          <a href="https://github.com/sujon-stat/EpiAgent" class="project-card__link" aria-label="View EpiAgent on GitHub">
+            View Repository →
+          </a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-card__head">
+            <div class="project-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div>
+              <h3 class="project-card__title">KAP Research (Skincare)</h3>
+              <p class="project-card__subtitle">Knowledge, Attitudes &amp; Practices Study</p>
+            </div>
+          </div>
+          <p class="project-card__desc">
+            A full Knowledge, Attitudes, and Practices study on skincare behaviors, with a
+            reproducible R analysis pipeline that generates all manuscript tables
+            automatically. Demonstrates end-to-end research workflow: data cleaning,
+            descriptive statistics, inferential testing, and publication-ready table output.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">R</span>
+            <span class="tag">KAP Study</span>
+            <span class="tag">Reproducible Research</span>
+            <span class="tag">Manuscript Tables</span>
+          </div>
+          <a href="#" class="project-card__link" aria-label="View KAP Research on GitHub">
+            View Repository →
+          </a>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal">
+          <div class="project-card__head">
+            <div class="project-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div>
+              <h3 class="project-card__title">RDW in Pediatric CAP</h3>
+              <p class="project-card__subtitle">Prognostic Biomarker Analysis</p>
+            </div>
+          </div>
+          <p class="project-card__desc">
+            A research report on the prognostic value of Red Cell Distribution Width (RDW)
+            in children with Community-Acquired Pneumonia (CAP). Examines RDW as a readily
+            available laboratory marker for predicting disease severity and clinical outcomes
+            in pediatric populations.
+          </p>
+          <div class="project-card__tags">
+            <span class="tag">R</span>
+            <span class="tag">Survival Analysis</span>
+            <span class="tag">Pediatrics</span>
+            <span class="tag">Prognostic Markers</span>
+          </div>
+          <a href="#" class="project-card__link" aria-label="View RDW project on GitHub">
+            View Repository →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH & PUBLICATIONS ===== -->
+  <section id="research" class="section section--alt">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Research &amp; Publications</h2>
+      </div>
+      <div class="research__list">
+        <article class="research-item reveal">
+          <div class="research-item__status">
+            <span class="status-badge status-badge--progress">In Progress</span>
+          </div>
+          <div class="research-item__body">
+            <h3 class="research-item__title">
+              Health Diplomacy Scoping Review
+            </h3>
+            <p class="research-item__abstract">
+              A PhD-level scoping review examining the landscape of health diplomacy research,
+              with Q1-journal-standard figure and table structuring. Maps the conceptual
+              boundaries of the field, identifies research gaps, and proposes a framework for
+              future inquiry. Currently in manuscript development.
+            </p>
+          </div>
+        </article>
+
+        <article class="research-item reveal">
+          <div class="research-item__status">
+            <span class="status-badge status-badge--placeholder">Placeholder</span>
+          </div>
+          <div class="research-item__body">
+            <h3 class="research-item__title">
+              [Future Preprint / Paper Title]
+            </h3>
+            <p class="research-item__abstract">
+              <em>Space reserved for upcoming preprints and published papers. Each entry will
+              include title, publication status (in progress / submitted / published), and an
+              abstract snippet.</em>
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Skills</h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 2 5-6"/></svg>
+            Statistical Methods
+          </h3>
+          <ul class="skill-group__list">
+            <li>Survival Analysis</li>
+            <li>Generalized Linear Models</li>
+            <li>Multilevel / Mixed-Effects Modeling</li>
+            <li>Causal Inference (Foundations)</li>
+            <li>Complex Survey Analysis</li>
+            <li>Concentration Index &amp; Health Inequality</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Programming
+          </h3>
+          <ul class="skill-group__list">
+            <li>R (primary)</li>
+            <li>Python</li>
+            <li>SQL (basic)</li>
+            <li>Bash scripting (basic)</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Tools
+          </h3>
+          <ul class="skill-group__list">
+            <li>RStudio</li>
+            <li>VS Code + GitHub Copilot</li>
+            <li>Git &amp; GitHub</li>
+            <li>LaTeX</li>
+            <li>Quarto / R Markdown</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Domain Knowledge
+          </h3>
+          <ul class="skill-group__list">
+            <li>Epidemiology</li>
+            <li>Biostatistics</li>
+            <li>Complex Survey Design (DHS, MICS, STEPS)</li>
+            <li>Maternal &amp; Child Health</li>
+            <li>NCD Multimorbidity</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTENT & COMMUNITY ===== -->
+  <section id="content" class="section section--alt">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">06</span>
+        <h2 class="section__title">Content &amp; Community</h2>
+      </div>
+      <div class="content__grid">
+        <article class="content-card reveal">
+          <div class="content-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <h3 class="content-card__title">
+            "Building My First R Package — Learning in Public"
+          </h3>
+          <p class="content-card__desc">
+            A LinkedIn series documenting the journey of developing <code>SurveyNCD</code> —
+            from initial concept and package architecture to CRAN submission. Covers lessons
+            learned, design decisions, and the realities of building statistical software as
+            a student.
+          </p>
+          <a href="https://www.linkedin.com/in/sujon-mia-123072319" class="content-card__link">Read on LinkedIn →</a>
+        </article>
+        <article class="content-card reveal">
+          <div class="content-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3 class="content-card__title">
+            Educational Video Content <span class="content-card__soon">(Planned)</span>
+          </h3>
+          <p class="content-card__desc">
+            Upcoming content covering data science, statistics, programming, and
+            scholarship/exam guidance. Will include tutorials on R, survey analysis,
+            and graduate school application strategies.
+          </p>
+          <span class="content-card__link content-card__link--muted">Coming Soon</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACHIEVEMENTS / TIMELINE ===== -->
+  <section id="achievements" class="section">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">07</span>
+        <h2 class="section__title">Achievements &amp; Milestones</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2024 — Present</span>
+            <h3 class="timeline__title">Researcher at StatAid Research Lab</h3>
+            <p class="timeline__desc">
+              Analyzing WHO STEPS, DHS, and MICS population health survey data. Contributing
+              to NCD multimorbidity research and health inequality measurement.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2025</span>
+            <h3 class="timeline__title">SurveyNCD R Package Development</h3>
+            <p class="timeline__desc">
+              Began developing an R package for complex survey analysis of NCD data, targeting
+              CRAN submission. Documenting the process through a public LinkedIn series.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2025</span>
+            <h3 class="timeline__title">Google/Kaggle 5-Day AI Agents Intensive</h3>
+            <p class="timeline__desc">
+              Submitted <strong>EpiAgent</strong> epidemic surveillance pipeline as capstone
+              project. Recognized for architectural clarity and strong test coverage.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2024 — 2025</span>
+            <h3 class="timeline__title">Health Diplomacy Scoping Review</h3>
+            <p class="timeline__desc">
+              Completed a PhD-level scoping review with Q1-journal-standard structuring of
+              figures and tables.
+            </p>
+          </div>
+        </div>
+        <div class="timeline__item reveal">
+          <div class="timeline__dot timeline__dot--muted"></div>
+          <div class="timeline__content">
+            <span class="timeline__date">2021 — 2026</span>
+            <h3 class="timeline__title">B.Sc. Statistics Coursework</h3>
+            <p class="timeline__desc">
+              Completed coursework in Design of Experiments, Epidemiology, Biostatistics,
+              Operations Research, Probability &amp; Inference, Regression Analysis, and
+              Statistical Computing at Jagannath University.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section--alt">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__num">08</span>
+        <h2 class="section__title">Contact</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="contact__lead">
+            Open to research collaborations, graduate program inquiries, and conversations
+            about biostatistics, epidemiology, and health data science.
+          </p>
+          <ul class="contact__links">
+            <li>
+              <a href="mailto:sujonsgc@gmail.com" class="contact__link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>sujonsgc@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sujon-mia-123072319" class="contact__link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/sujon-stat" class="contact__link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://orcid.org/0009-0001-1032-2818" class="contact__link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9 8v8"/><circle cx="9" cy="6.5" r="0.5" fill="currentColor"/><path d="M13 8v8"/><path d="M13 8h1.5a2.5 2.5 0 0 1 0 5H13"/></svg>
+                <span>ORCID</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn--primary contact__cv" download>Download CV</a>
+        </div>
+        <form class="contact__form reveal" onsubmit="return handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form__note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">© <span id="year"></span> Sujon. Built with intention.</p>
+      <a href="#hero" class="footer__top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
